@@ -1,0 +1,21 @@
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+
+}
+
+.rojo {
+
+    width: 150px;
+    height: 150px;
+    background-color: red;
+}
+
+
+.verde {
+
+    width: 150px;
+    height: 150px;
+    background-color: rgb(26, 134, 49);
+}
