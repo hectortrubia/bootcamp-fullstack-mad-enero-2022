@@ -33,13 +33,16 @@ import './style.css';
 // Para hacer over necesitamos hacer un evento en exmpybox porque es el que tiene que avisar al padre de que le acaban de pasar el raton por encima.
 
 
-function Emptybox() {
-
-
+function EmptyBox({ handlerOn = () => { } }) {
+    const handler = () => {
+        handlerOn('green')
+    }
+    const handlerr = () => {
+        handlerOn('red')
+    }
     return (
-
-        <div className='div_containerempty'></div>
+        <div onMouseLeave={handlerr} onMouseOver={handler} className="empty" > </div>
     )
 }
 
-export default Emptybox;
+export default EmptyBox

@@ -29,17 +29,10 @@ import './style.css';
 
 // Cuando haga hover sobre el componente EmptyBox deberá cambiar el color de fondo de FillBox a verde.
 
-function Fillbox() {
+function FillBox(props){
+    
+    return <div style={{backgroundColor:props.color}} className='fill'></div>
 
-    function changeBackground(e) {
-        e.target.style.background = 'red';
-      }
-
-
-    return (
-
-        <div className='div_containerred'></div>
-    )
 }
 
-export default Fillbox;
+export default FillBox

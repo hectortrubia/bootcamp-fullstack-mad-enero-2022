@@ -1,5 +1,6 @@
 import Emptybox from '../emptybox';
 import Fillbox from '../fillbox';
+import React, { useState } from 'react';
 import './style.css';
 
 
@@ -43,25 +44,26 @@ import './style.css';
 
 function BoxContainer() {
 
-    let [counter, updateCounter] = useState('div_containerred');
-
-    const handler = () => {
-        updateCounter(color); // uso la función de actualización para cambia el valor y refrescar el componente
-
+    let[change,updatechange] = useState('red')
+    
+    const handler = background =>{
+        updatechange(background)
+      
     }
-
-
-
     return (
+        <react.Fragment>
+            <div className='container'>
+                <EmptyBox handlerOn={handler}></EmptyBox>
+                <FillBox color={change}></FillBox>
+            </div>
 
-        <div className='box_container'>
+        </react.Fragment>
 
-            <Emptybox onMouseOver={handler}></Emptybox>
-            <Fillbox color={props.style.background = 'red'} ></Fillbox>
-
-        </div>
 
     )
-    }
 
-export default BoxContainer;
+}
+
+
+
+export default BoxContainer
