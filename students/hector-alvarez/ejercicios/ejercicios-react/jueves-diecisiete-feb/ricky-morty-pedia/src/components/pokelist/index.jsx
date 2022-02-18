@@ -1,23 +1,20 @@
 import React from 'react';
 import './style.css';
-import Pokecard from '../pokecard';
+import Pokemon from '../pokecard';
 import {useState} from 'react';
 import {useEffect} from 'react';
 
 
 
-function Pokelist() {
-
-
-    let [pok, uptdatepok] = useState([])
+function PokemonList() {
+    let [pok, updatepok] = useState([])
 
     useEffect(() => {
-
-        fetch("https://pokeapi.co/api/v2/pokemon")
-            .then(r => r.jason())
+        fetch('https://pokeapi.co/api/v2/pokemon')
+            .then(r => r.json())
             .then(c => {
 
-                c.results.ForEach(v => {
+                c.results.forEach(v => {
                     console.log(v)
                     fetch(v.url)
                         .then(r => r.json())
@@ -27,30 +24,38 @@ function Pokelist() {
                                 img: data.sprites.back_default,
                                 name: data.name,
                                 type: [data.types]
-                            }
-                            uptdatepok((pok) => [...pok, pokemon])
 
-
+                            };
+                            // updatepok( (pok)=>[...pok,pokemon])
+                            pok.push(pokemon)
+                            console.log(pok)
                         })
+
                 })
 
-            })
+            });
 
+    }, []);
 
-    })
 
     return (
-
         <React.Fragment>
+<div className="container">
 
             {pok.length === 0 ? <h1>cargando</h1> : pok.map((v, i) =>
 
-                <Pokecard Key={i} nombre={v.name} img={v.img} id={v.id} type={v.type}></Pokecard>)}
+                <Pokemon key={i} nombre={v.name} img={v.img} id={v.id} type={v.type} ></Pokemon>)}
+
+
+</div>
 
         </React.Fragment>
 
+
+
     )
+
 
 }
 
-export default Pokelist
+export default PokemonList

@@ -8,13 +8,8 @@ function App() {
   return (
     <div className="App">
 
-      <header>
-        <Nav></Nav>
-      </header>
-
-      <body>
+     
         <Pokelist></Pokelist>
-      </body>
 
     </div>
   );

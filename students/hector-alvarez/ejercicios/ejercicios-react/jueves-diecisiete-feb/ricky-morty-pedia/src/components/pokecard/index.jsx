@@ -2,25 +2,30 @@ import React from 'react';
 import './style.css';
 
 
-function Pokecard(props) {
-
+function Pokemon(props) {
     return (
         <React.Fragment>
+            <div className="containercard">
 
-            <div className="card_container">
-                <img alt="bulbasur" src={props.img}></img>
-                <div className="info_container">
-                    <h1>{props.name}</h1>
+                <div className="">
+                    <img src={props.img}></img>
+                </div>
+                <div className="">
+                    <p>{props.nombre}</p>
                     <p>{props.id}</p>
                     <p></p>
                 </div>
+
             </div>
 
+
+
         </React.Fragment>
+
 
 
     )
 
 }
 
-export default Pokecard
+export default Pokemon
