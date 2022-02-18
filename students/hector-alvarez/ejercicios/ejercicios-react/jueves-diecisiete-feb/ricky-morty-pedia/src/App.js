@@ -1,17 +1,37 @@
-import logo from './logo.svg';
 import './App.css';
 import React from 'react';
-import Pokelist from './components/pokelist/index.jsx';
-import Nav from './components/nav/index.jsx';
+import Pokelist from './pages/pokelist/index.jsx';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Contact from './pages/contact';
+import Details from './pages/details';
+import Notfound from './pages/notfound';
+import Nav from './components/nav';
+
+
 
 function App() {
   return (
-    <div className="App">
 
-     
+
+    <BrowserRouter>
+      <header>
+        <Nav></Nav>
+      </header>
+
+      <Routes>
+        <Route path="/" element={<Pokelist></Pokelist>}></Route>
+        <Route path="contact" element={<Contact></Contact>}></Route>
+        <Route path="details" element={<Details></Details>}></Route>
+        <Route path="/*" element={<Notfound></Notfound>}></Route>
+      </Routes>
+
+      <main>
         <Pokelist></Pokelist>
+      </main>
 
-    </div>
+
+
+    </BrowserRouter>
   );
 }
 

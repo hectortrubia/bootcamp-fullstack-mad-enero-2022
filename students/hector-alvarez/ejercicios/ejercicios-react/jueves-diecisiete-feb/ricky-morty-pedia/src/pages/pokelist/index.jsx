@@ -1,6 +1,6 @@
 import React from 'react';
 import './style.css';
-import Pokemon from '../pokecard';
+import Pokemon from '../../components/pokecard';
 import {useState} from 'react';
 import {useEffect} from 'react';
 
