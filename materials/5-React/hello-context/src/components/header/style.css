@@ -1,0 +1,10 @@
+
+
+header {
+    padding: 1rem;
+    color: white;
+    background-color: rgb(42, 33, 33);
+    display: flex;
+    vertical-align: middle;
+    justify-content: space-around;
+}

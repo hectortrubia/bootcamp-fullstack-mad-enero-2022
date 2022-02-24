@@ -11,6 +11,7 @@ import FetchExample from './components/fetch-example';
 import Sentiment from './components/sentiments';
 import CounterContainer from './components/counter-container';
 import FilterComponentExample from './components/filter-component-example';
+import CustomHookExample from './components/custom-hook-example';
 
 function App() {
 
@@ -38,7 +39,8 @@ function App() {
       </pre>
       <p style={{marginTop: '1rem'}} >Status code: 200</p> */}
       {/* <CounterContainer></CounterContainer> */}
-      <FilterComponentExample></FilterComponentExample>
+      {/* <FilterComponentExample></FilterComponentExample> */}
+      <CustomHookExample></CustomHookExample>
     </React.Fragment>
   );
 }
