@@ -15,20 +15,20 @@ function PokemonList() {
             .then(c => {
 
                 c.results.forEach(v => {
-                    console.log(v)
+               
                     fetch(v.url)
                         .then(r => r.json())
                         .then(data => {
                             let pokemon = {
                                 id: data.id,
-                                img: data.sprites.back_default,
+                                img: data.sprites.front_default,
                                 name: data.name,
-                                type: [data.types]
+                                type: [data.types],
 
                             };
-                            // updatepok( (pok)=>[...pok,pokemon])
+                            updatepok( (pok)=>[...pok,pokemon])
                             pok.push(pokemon)
-                            console.log(pok)
+                         
                         })
 
                 })

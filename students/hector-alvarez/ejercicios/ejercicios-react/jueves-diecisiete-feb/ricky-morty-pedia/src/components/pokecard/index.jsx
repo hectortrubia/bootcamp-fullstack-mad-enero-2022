@@ -1,19 +1,26 @@
 import React from 'react';
 import './style.css';
+import { Link } from 'react-router-dom';
 
 
 function Pokemon(props) {
     return (
+
+        <Link to={`details/${props.id}`} state = {{ from:props}} >
+
         <React.Fragment>
+
+        
             <div className="containercard">
 
-                <div className="">
-                    <img src={props.img}></img>
+                <div className="img_container">
+                    <img style={{width:"150px"}} src={props.img}></img>
                 </div>
-                <div className="">
+                <div className="info_container">
                     <p>{props.nombre}</p>
                     <p>{props.id}</p>
-                    <p></p>
+                    {props.type[0].map((v, i) => <p>{(v.type.name)}</p>)}
+            
                 </div>
 
             </div>
@@ -21,6 +28,8 @@ function Pokemon(props) {
 
 
         </React.Fragment>
+        
+        </Link>
 
 
 

@@ -9,7 +9,7 @@ function Nav() {
 
         <nav>
             <div className='nav_container'>
-                <Link to="/contact">
+                <Link to="/">
                     <img src="https://pokeapi.co/static/pokeapi_256.3fa72200.png"></img>
                 </Link>
                 <input className='input'></input>
