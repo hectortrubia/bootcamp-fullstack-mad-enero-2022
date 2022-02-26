@@ -1,0 +1,18 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+    }
+    
+    .nav_container {
+    
+      display: flex;
+      flex-direction: row;
+      height: 70px;
+      background-color: rgb(180, 171, 171);
+      min-width: 100vw;
+      align-items: center;
+      justify-content: center;
+
+    }
