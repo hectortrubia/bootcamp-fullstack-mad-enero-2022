@@ -1,0 +1,48 @@
+
+
+
+
+.card__container {
+    margin-left: 100px;
+    margin-top: 100px;
+    max-width: 300px;
+    border: 1px solid lightgrey;
+    border-radius: 5px;
+}
+
+.card__img {
+    max-width: 300px;
+}
+
+.card__body {
+    padding: 1rem;
+}
+
+.card__body--light{
+    background-color: #F8F9FA;
+}
+
+.card__body--dark {
+    background-color: black;
+    color: white;
+}
+
+.card__body > * {
+    margin-bottom: 0.5rem;
+}
+
+.card__content-ml {
+    margin-left: 1rem;
+}
+
+hr {
+    border: 1px solid lightgrey;
+}
+
+.card__button{
+    padding: 0.75rem;
+    background-color: #28A745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
