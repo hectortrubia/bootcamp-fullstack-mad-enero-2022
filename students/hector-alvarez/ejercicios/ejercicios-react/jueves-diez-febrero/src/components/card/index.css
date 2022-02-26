@@ -1,0 +1,17 @@
+
+
+
+.container_card {
+
+    display: flex;
+    flex-direction: column;
+}
+
+.imagencerve {
+
+    width: 600px;
+
+}
+
+
+
