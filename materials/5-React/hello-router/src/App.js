@@ -9,6 +9,7 @@ import Contact from './pages/contact';
 import Login from './pages/login';
 import PrivateHome from './pages/private-home';
 import PrivateRoute from './components/private-route';
+import DemoQuery from './pages/demo-query';
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
           <Route path='/contact' element={<PrivateRoute><Contact/></PrivateRoute>}></Route>
           <Route path='/login' element={<Login></Login>}></Route>
           <Route path='/private/home' element={<PrivateHome/>}></Route>
+          <Route path='/operar' element={<DemoQuery></DemoQuery>}></Route>
         </Routes>
       </main>
       <p>Esto es despues de las página</p>
