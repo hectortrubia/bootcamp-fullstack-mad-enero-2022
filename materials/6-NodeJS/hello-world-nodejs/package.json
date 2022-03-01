@@ -1,13 +1,1 @@
-{
-  "name": "hello-world-nodejs",
-  "version": "1.0.0",
-  "description": "",
-  "main": "hello-world.js",
-  "type": "module",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC"
-}
+{"name":"hello-world-nodejs","version":"1.0.0","description":"","main":"hello-world.js","type":"module","scripts":{"test":"echo \"Error: no test specified\" && exit 1"},"keywords":["node","hello","Hola","Adios","Bootcamp","Hola","Adios","Bootcamp","Hola","Adios","Bootcamp","Hola","Adios","Bootcamp","Hola","Adios","Bootcamp","Hola","Adios","Bootcamp","Hola","Adios","Bootcamp","Hola","Adios","Bootcamp","Hola","Adios","Bootcamp","Hola","Adios","Bootcamp","Hola","Adios","Bootcamp","Hola","Adios","Bootcamp","Hola","Adios","Bootcamp"],"author":"","license":"ISC"}
