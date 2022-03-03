@@ -1,1 +1,8 @@
-[{"name":"potato post","description":"de las buenas post","price":"15","id":"cea673c7-893e-4828-b5ec-6e9ae0d4e0b6"},{"name":"potato post","description":"de las buenas post","price":"15","id":"95c13a15-f899-49cf-9858-40bb026f74e5"}]
+[
+    {
+        "name": "funciona",
+        "price": "25",
+        "description": "de las buenas post",
+        "id": "cea673c7-893e-4828-b5ec-6e9ae0d4e0b6"
+    }
+]

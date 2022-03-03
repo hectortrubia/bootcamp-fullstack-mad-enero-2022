@@ -1,7 +1,7 @@
 import express from 'express'; // importamos express para poder usarlo
 import { argv } from 'process';
 import process from 'process';
-import {readFileSync} from 'fs'
+import {readFileSync, rm} from 'fs'
 import {writeFile} from 'fs'
 import { v4 as uuidv4 } from 'uuid';
 
@@ -74,3 +74,38 @@ app.get('/products/:id', (req, res) => {
     res.send(filteredProducts? filteredProducts:'error 404')
 })
 
+
+
+app.delete('/products/:id', (req, res)=> {
+    const products = readFileSync('./products.json',{encoding: 'utf8'});
+    const arrProducts= JSON.parse(products);
+    const filteredProducts = arrProducts.filter(c => c.id!==req.params.id);
+    writeFile('./products.json',JSON.stringify(filteredProducts),()=>{})
+
+
+    res.send('peticion de borrado recibida');
+  });
+  
+
+  app.patch('/products/:id', function (req, res) {
+    const products = readFileSync('./products.json',{encoding: 'utf8'});
+    const arrProducts= JSON.parse(products);
+    const someProduct = arrProducts.some(c => c.id===req.params.id);
+
+    if (someProduct){
+        const product ={
+            name: req.body.name,
+            price: req.body.price,
+            description: req.body.description,
+            id: req.params.id
+        }
+        const filteredProducts = arrProducts.filter(c => c.id!==req.params.id);
+        filteredProducts.push(product)
+    
+        writeFile('./products.json',JSON.stringify(filteredProducts),()=>{});
+        res.send('Got a DELETE request at /user');
+    }else{
+        res.send('error 404')
+    }
+   
+});

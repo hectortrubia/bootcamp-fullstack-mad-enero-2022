@@ -1,6 +1,7 @@
 {
-  "name": "v2802",
+  "name": "backuserapi",
   "version": "1.0.0",
+  "description": "",
   "main": "index.js",
   "type": "module",
   "scripts": {
@@ -10,10 +11,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "body-parser": "^1.19.2",
-    "express": "^4.17.3",
-    "uuid": "^8.3.2"
-  },
-  "devDependencies": {},
-  "description": ""
+    "cors": "^2.8.5",
+    "express": "^4.17.3"
+  }
 }
