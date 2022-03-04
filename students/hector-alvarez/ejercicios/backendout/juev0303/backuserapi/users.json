@@ -1,5 +1,10 @@
 [
     {
-        "name":"hector"
+        "name": "hector de backend cambiado",
+        "lastname": "lastname de backend",
+        "username": "username de backend",
+        "country": "pais de backend",
+        "img": "imagen de backend",
+        "id": "a28b4fe8-8f9b-4a95-a7ac-cfaab35cf494"
     }
 ]
