@@ -1,5 +1,4 @@
-import 'bootstrap/dist/css/bootstrap.min.css';
-import './App.css';
+
 import { useEffect } from 'react';
 import Navegador from './components/navegador.jsx';
 import React from 'react';
@@ -7,6 +6,12 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Listado from './pages/listado';
 import CardList from './pages/details';
 import Contacto from './pages/contacto';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import './App.css';
+import Navegadorcopy from './components/navegador.jsx';
+
+
+
 
 
 
@@ -23,7 +28,7 @@ function App() {
         <Navegador></Navegador>
 
         <Routes>
-          <Route path="/" element={<Listado></Listado>}></Route>
+          <Route path="/listado" element={<Listado></Listado>}></Route>
           <Route path="/contacto" element={<Contacto></Contacto>}></Route>
           <Route path="/details" element={<CardList></CardList>} ></Route>
         </Routes>
