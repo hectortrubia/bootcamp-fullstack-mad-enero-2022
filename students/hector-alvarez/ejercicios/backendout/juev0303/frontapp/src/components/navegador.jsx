@@ -11,7 +11,7 @@ function Navegador() {
         onSelect={(selectedKey) => alert(`selected ${selectedKey}`)}
       >
         <Nav.Item>
-          <Nav.Link><Link to="listado">Listado</Link></Nav.Link>
+          <Nav.Link><Link to="/">Listado</Link></Nav.Link>
         </Nav.Item>
         <Nav.Item>
           <Nav.Link><Link to="contacto">Formulario</Link></Nav.Link>

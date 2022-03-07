@@ -6,7 +6,7 @@ import { v4 as uuidv4 } from 'uuid';
 
 
 const app = express()
-const port = 4000 //?? params
+const port = 4003 //?? params
 
 app.use(express.json())
 app.use(cors())
@@ -29,6 +29,7 @@ app.post('/',(req, res)=>{
         img: req.body.img,
         id: id
     }
+
     const nameJson = readFileSync('./users.json',{encoding: 'utf8'});
     const obj= JSON.parse(nameJson)
     obj.push(user)

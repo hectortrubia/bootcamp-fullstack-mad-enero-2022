@@ -8,7 +8,7 @@ function Listado() {
     let [data,updateData]= useState([])
     useEffect(() => {
 
-        fetch('http://localhost:4000/')
+        fetch('http://localhost:4003/')
         .then(j => j.json())
         .then(r => updateData(r))
     }, [])
