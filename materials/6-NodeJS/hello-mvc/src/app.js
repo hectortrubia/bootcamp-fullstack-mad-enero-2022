@@ -1,5 +1,5 @@
 import express from 'express';
-import flightsRouter from './flights/flights.router';
+import flightsRouter from './flights/flights.router.js';
 
 /**
  * 1. Crear una carpeta por cada recurso de mi app (vuelos, productos, usuarios, aviones, ...)

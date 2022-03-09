@@ -1,5 +1,5 @@
 // este archivo tendrá la declaración y lógica de los controllers, es decir, las funciones que gestionan la ruta
-import {retrieveFlights, retrieveFlightById} from './flights.model';
+import {retrieveFlights, retrieveFlightById} from './flights.model.js';
 
 
 
