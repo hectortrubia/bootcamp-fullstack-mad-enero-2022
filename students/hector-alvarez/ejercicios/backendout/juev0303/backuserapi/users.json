@@ -1,8 +1,11 @@
 [
     {
-        "id": "cc8dfcf0-f6ff-4243-8abc-51a3748de3b5"
-    },
-    {
-        "id": "93a35cf5-8d01-401c-91d0-b572d37988e0"
+        "name": "funciona prueba post",
+        "lastname": "de las buenas post",
+        "username": "44",
+        "country": "3",
+        "img": "3",
+        "id": "62bcc1af-f3bc-401d-b1aa-609a63f86993"
     }
+    
 ]
