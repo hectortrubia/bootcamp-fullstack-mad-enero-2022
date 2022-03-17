@@ -9,54 +9,51 @@ const client = new MongoClient(URI); // paso 5
 
 // function que devuelve los libros
 export const retrieveBooks = async (book) => {
-    try{
+    try {
         await client.connect(); // paso 6
         const db = client.db(DB_NAME); // paso 7
         const booksCol = db.collection(COLLECTION_NAME); // paso 8
-        await booksCol.insertOne(book)
+        // await booksCol.insertOne(book)
         // const opt = {
         //     projection: { _id:0 }
         // }
         // a partir de aqui ya puedo hacer operaciones con la collection
-        // const books = await booksCol.find({}).toArray(); // paso 9 devuelve todos los documentos en formato Array de JS
-        return booksCol;
-    }catch(err){
+        const books = await booksCol.find().toArray(); // paso 9 devuelve todos los documentos en formato Array de JS
+        return books;
+    } catch (err) {
         console.error('Retrieve Books error: ', err);
-    }finally {
+    } finally {
         await client.close(); // paso 10. Cerramos la conexión
     }
 };
 
-// export const retrieveBookById = async id => {
-//     try{
-//         await client.connect(); // paso 6
-//         const db = client.db(DB_NAME); // paso 7
-//         const booksCol = db.collection(COLLECTION_NAME); // paso 8
-//         // const opt = {
-//         //     projection: { _id:0 }
-//         // }
-//         const query = { id };
-//         // a partir de aqui ya puedo hacer operaciones con la collection
-//         const f = await booksCol.findOne(query, opt);// paso 9 
-//         return f ?? undefined;
-//     }catch(err){
-//         console.error('Retrieve Book By id error: ', err);
-//     }finally {
-//         await client.close(); // paso 10. Cerramos la conexión
-//     }
-// }
+export const retrieveBookById = async ISBN => {
+    try {
+        await client.connect(); // paso 6
+        const db = client.db(DB_NAME); // paso 7
+        const booksCol = db.collection(COLLECTION_NAME); // paso 8
+        const query = { ISBN: ISBN };
+        // a partir de aqui ya puedo hacer operaciones con la collection
+        const f = await booksCol.findOne(query);// paso 9 
+        return f ?? undefined;
+    } catch (err) {
+        console.error('Retrieve Book By iSBN error: ', err);
+    } finally {
+        await client.close(); // paso 10. Cerramos la conexión
+    }
+}
 
 
-// export const createBook = async (book) => {
-//     try{
-//         await client.connect(); // paso 6
-//         const db = client.db(DB_NAME); // paso 7
-//         const flightsCol = db.collection(COLLECTION_NAME); // paso 8
-//         // a partir de aqui ya puedo hacer operaciones con la collection
-//         await booksCol.insertOne(book);// paso 9 
-//     }catch(err){
-//         console.error('Retrieve Book By id error: ', err);
-//     }finally {
-//         await client.close(); // paso 10. Cerramos la conexión
-//     }
-// }
+export const createBook = async (book) => {
+    try {
+        await client.connect(); // paso 6
+        const db = client.db(DB_NAME); // paso 7
+        const booksCol = db.collection(COLLECTION_NAME); // paso 8
+        // a partir de aqui ya puedo hacer operaciones con la collection
+        await booksCol.insertOne(book);// paso 9 
+    } catch (err) {
+        console.error('Retrieve Book By SBN error: ', err);
+    } finally {
+        await client.close(); // paso 10. Cerramos la conexión
+    }
+}
